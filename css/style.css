@@ -31,8 +31,8 @@ img, picture, video, canvas, svg {
 }
 
 a {
-    color: var(--color-primary);
     text-decoration: none;
+    color: inherit;
 }
 
 a:visited {
