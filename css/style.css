@@ -3,20 +3,20 @@
 :root {
     --font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
     --font-size-base: 16px;
-    --color-primary: #2d89ef;
-    --color-secondary: #f5f5f5;
-    --color-text: #222;
+    --color-primary: #3A6389;
+    --color-secondary: #D5E6EA;
+    --color-text: #073D63;
 }
 
-*, *::before, *::after {
-    font-family: var(--font-family);
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
 body {
-    margin: 0;
+    font-size: calc(0.5rem + 1.5vw);
+    margin: 20px;
     padding: 0;
     font-family: var(--font-family);
     color: var(--color-text);
@@ -39,7 +39,282 @@ a:visited {
     color: inherit;
 }
 
+ul, li {
+    list-style: none;
+}
 button, input, textarea, select {
     font-family: inherit;
     font-size: inherit;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+h2 {
+    font-size: 1.2rem;
+}
+p {
+    color: black;
+}
+/***
+    header
+***/
+header {
+    margin-bottom: 40px;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar-logo-link {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    height: auto;
+}
+.logo-icon {
+    width: 80px;
+}
+.logo-text {
+    width: 150px;
+}
+.navbar-menu {
+    position: fixed;
+    top: 0;
+    margin: 0;
+    width: 100%;
+    right: -100%;
+    height: 100vh;
+    background: var(--color-primary);
+    color: white;
+    z-index: 1000;
+    transition: right 0.4s ease;
+    padding: 60px 20px;
+}
+
+.icons-burger {
+    /* display: none; */
+    font-size: 30px;
+}
+
+.icons-burger:before {
+    content: "\2630";
+}
+
+.active .icons-burger:before {
+    content: "\2715";
+    color: white;
+}
+.active .navbar-menu {
+    right: 0;
+}
+
+/***
+    section title
+***/
+.title {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.title-content {
+    /* height: 300px; */
+    background-color: var(--color-secondary);
+    padding: 10px 10px 20px 10px;
+}
+
+.title-content h1 {
+    margin-bottom: 10px;
+}
+
+.title-content p{
+    margin-bottom: 20px;
+}
+
+.title-picture {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    object-position: bottom;
+}
+.link-devis {
+    background-color: var(--color-primary);
+    color: white;
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/***
+    section reduction
+***/
+.reduction {
+    background-color: var(--color-secondary);
+    padding: 10px;
+}
+
+.title-reduction {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 10px;
+}
+
+.lightbulb-icon {
+    width: 40px;
+}
+
+.sap-image {
+    display: block;
+    margin: 0 auto;
+    width: 130px;
+}
+    
+.exemple-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.hand-icon {
+    width: 40px;
+}
+
+.exemple-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.exemple-list li {
+    list-style-type: "\2756";
+}
+
+.info-reduction {
+    font-size: 0.7rem;
+}
+
+/***
+    section services
+***/
+.services {
+    background-color: #F5F5F5;
+}
+
+.service-content {
+    padding: 10px;
+}
+
+.service-content-title {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    margin: 8px 0;
+}
+
+.service-icons {
+    width: 40px;
+    margin-right: 10px;
+}
+
+/** 
+    section info
+***/
+.info {
+    background-color: #F5F5F5;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 17px;
+}
+
+.info-list {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.info-list-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.info-list-description {
+    text-align: center;
+}
+
+.info-icons {
+    width: 30px;
+    margin-right: 10px;
+}
+
+/***
+    section contact
+***/
+.contact {
+    
+}
+
+.contact-title {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 5px;
+    margin-bottom: 25px;
+}
+
+.contact-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    background-color: var(--color-secondary);
+    border-radius: 5px;
+    padding: 5px;
+    margin: 0 10px;
+}
+
+.contact-icon {
+    width: 25px;
+}
+
+/***
+    footer
+***/
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-top: solid 2px;
+    padding-top: 10px;
+    gap: 8px;
+}
+
+.footer-email, .footer-phone {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.icon-email-footer, .icon-phone-footer, .icon-fb-footer {
+    width: 20px;
+}
+
+.image-sap-footer {
+    width: 70px;
 }
