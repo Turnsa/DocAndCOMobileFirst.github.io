@@ -1,3 +1,4 @@
+// Toggle navigation menu
 const menu = document.querySelector('.icons-burger');
 const navbar = document.querySelector('.navbar');
 

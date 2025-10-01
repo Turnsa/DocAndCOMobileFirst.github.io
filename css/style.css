@@ -15,7 +15,7 @@
 }
 
 body {
-    font-size: calc(0.5rem + 1.5vw);
+    font-size: calc(0.5rem + 1vw);
     margin: 20px;
     padding: 0;
     font-family: var(--font-family);
@@ -53,12 +53,19 @@ main {
     gap: 30px;
     margin-bottom: 30px;
 }
+
+h3 ,h1 {
+    margin: 10px 0;
+}
+
 h2 {
     font-size: 1.2rem;
 }
+
 p {
     color: black;
 }
+
 /***
     header
 ***/
@@ -169,7 +176,7 @@ header {
     display: flex;
     align-items: center;
     gap: 15px;
-    padding: 20px 10px;
+    padding: 20px 0;
 }
 
 .lightbulb-icon {
@@ -425,25 +432,79 @@ form {
 ********************/
 
 
-.no-gap {
+.main-legal-devis {
     gap: 0;
 }
 
-h3 ,h1 {
-    margin: 10px 0;
-}
-
-h2 {
+.main-legal-devis h2 {
     margin-top: 20px;
 }
 
 
-
 /***************
 
-    tablette
+    
 
 ***************/
-@media (min-width: 768px){
+/* Base styles pour mobile (jusqu’à 480px) */
+body {
+  /* font-size: 16px; */
+}
 
+/********
+
+        Petits appareils (≥ 480px) 
+        
+********/
+
+@media (min-width: 480px) {
+  /* Ex: smartphones en paysage */
+  main {
+    /* margin: 0 90px 30px 90px; */
+    margin: 0 5% 30px 5%;
+    font-size: 16px;
+  }
+
+  h1, p {
+    padding: 0 30px;
+  }
+
+    .title-content h1 {
+        margin-bottom: 0px;
+    }   
+  figure {
+    width: 100%;
+  } 
+  .services-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+  
+  /*** pages administratif, domicile ***/
+  .banniere-title {
+    width: 100%;
+    height: 200px;
+  }
+
+}
+
+/* Tablettes (≥ 768px) */
+@media (min-width: 768px) {
+  /* Ex: layout en grille, menu latéral */
+}
+
+/* Petites résolutions desktop (≥ 1024px) */
+@media (min-width: 1024px) {
+  /* Ex: sidebar visible, typographie plus grande */
+}
+
+/* Grands écrans (≥ 1280px) */
+@media (min-width: 1280px) {
+  /* Ex: layout étendu, marges plus larges */
+}
+
+/* Très grands écrans (≥ 1440px ou plus) */
+@media (min-width: 1440px) {
+  /* Ex: écrans ultra-wide, pliables en mode paysage */
 }

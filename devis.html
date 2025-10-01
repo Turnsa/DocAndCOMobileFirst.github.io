@@ -32,7 +32,7 @@
             <p>Besoin d’aide pour vos documents, formulaires ou démarches ? Remplissez le formulaire ou contactez-moi directement. Je vous répondrai rapidement.</p>
         </div>
         <section class="form-contact">
-            <form action="/envoyer-message" method="POST" style="max-width: 500px; margin: auto;">
+            <form id="contact-form" action="/envoyer-message" method="POST" style="max-width: 500px; margin: auto;">
                 <label for="nom">Nom et prénom :</label>
                 <input type="text" id="nom" name="nom" required >
                 <label for="email">Adresse mail :</label>
@@ -47,7 +47,7 @@
                     <option value="autre">Autre/Précisez dans votre message</option>
                 </select>
                 <label for="message">Message :</label>
-                <textarea id="message" name="message" rows="10" placeholder="Écrivez votre message ici..." maxlength="500" required></textarea>
+                <textarea id="message" name="message" rows="10" placeholder="Écrivez votre message ici..." maxlength="500"></textarea>
                 <button type="submit" class="contact-info-button">Envoyer</button>
             </form>
         </section>
