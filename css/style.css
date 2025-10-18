@@ -222,6 +222,12 @@ header {
 ***/
 
 .services {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.services-vignettes {
     background-color: #F5F5F5;
 }
 
@@ -296,6 +302,7 @@ header {
     justify-content: center;
     align-items: center;
     gap: 7px;
+    font-weight: 600;
     background-color: var(--color-secondary);
     border-radius: 5px;
     padding: 5px;
@@ -389,7 +396,6 @@ footer {
 }
 
 .prestation-tarif {
-    display: flex;
     width: 30%;
     gap: 5px;
 }
@@ -401,6 +407,7 @@ footer {
     padding: 10px;
     background-color: var(--color-secondary);
     text-align: center;
+    border-radius: 5px;
 }
 .contact-info {
     margin-top: 20px;
@@ -441,16 +448,6 @@ form {
 }
 
 
-/***************
-
-    
-
-***************/
-/* Base styles pour mobile (jusqu’à 480px) */
-body {
-  /* font-size: 16px; */
-}
-
 /********
 
         Petits appareils (≥ 480px) 
@@ -458,11 +455,15 @@ body {
 ********/
 
 @media (min-width: 480px) {
-  /* Ex: smartphones en paysage */
-  main {
+
+    body {
     /* margin: 0 90px 30px 90px; */
     margin: 0 5% 30px 5%;
     font-size: 16px;
+  }
+
+  header {
+    margin-top: 20px;
   }
 
   h1, p {
@@ -491,20 +492,211 @@ body {
 
 /* Tablettes (≥ 768px) */
 @media (min-width: 768px) {
-  /* Ex: layout en grille, menu latéral */
+
+    main {
+        margin: 0 60px 30px 60px;
+    }
 }
 
 /* Petites résolutions desktop (≥ 1024px) */
 @media (min-width: 1024px) {
-  /* Ex: sidebar visible, typographie plus grande */
+
+  /*** sections services ***/
+
+  .services {
+    flex-direction: row;
+  }
+    
 }
 
 /* Grands écrans (≥ 1280px) */
 @media (min-width: 1280px) {
-  /* Ex: layout étendu, marges plus larges */
+
+    body {
+        font-size: 0.875rem;
+    }
+
+    main {
+        margin: 0 12% 30px 12%;
+    }
+
+
+    
+    /*** header ***/
+
+    header {
+        margin-top: 30px;
+    }
+
+    .navbar-menu {
+        position: static;
+        display: flex;
+        gap: 35px;
+        height: auto;
+        width: auto;
+        font-size: 1.4rem;
+        padding: 0;
+        background-color: transparent;
+        color: inherit;
+    }
+
+    .navbar-list a {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    .navbar-list {
+        border-bottom: none;
+        border-radius: 5px;
+        padding: 0 10px;
+        transition: transform 0.7s ease;
+        transition: box-shadow 0.3s ease;
+    }
+
+    .navbar-list:hover {
+        background-color: var(--color-secondary);
+        box-shadow: 2px 2px 4px var(--color-text);
+        transform: scale(1.05);
+    }
+
+    .icons-burger {
+        display: none;
+    }
+
+    /****
+        page index
+    ****/
+
+    /*** section title ***/
+
+    .title {
+        flex-direction: row;
+        height: 400px;
+    }
+
+    .title-content {
+        flex: 1;
+        padding-top: 50px;
+    }
+    .title-content p {
+        margin-top: 20px;
+        margin-bottom: 70px;
+    }
+    
+    .title-picture {
+        flex: 1;
+        height: 100%;
+        object-fit: cover;
+        object-position: bottom;
+    }
+
+    .link-devis {
+        transition: transform 0.7s ease;
+        transition: box-shadow 0.3s ease;
+    }
+    
+    .link-devis:hover {
+        box-shadow: 2px 2px 4px var(--color-text);
+        transform: scale(1.05);
+    }
+
+    /*** section reduction ***/
+
+    .exemple-list {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    /*** section services ***/
+
+    .services-vignettes {
+        transition: transform 0.2s ease, color 0.2s ease;
+    }
+
+    .services-vignettes:hover {
+        transform: scale(1.05);
+        box-shadow: 4px 4px 6px #868074
+    }
+
+    /*** section info ***/
+    
+    .info {
+        padding: 25px;
+    }
+
+    .info-list {
+        flex-direction: row;
+    }
+
+    /*** section contact ***/
+
+    .contact {
+        display: flex;
+        gap: 30px;
+    }
+
+    .contact-title {
+        flex: 3;
+    }
+
+    .contact-link {
+        flex: 1;
+        width: 50%;
+        height: 70px;
+        transition: transform 0.7s ease;
+        transition: box-shadow 0.3s ease;
+    }
+    
+    .contact-link:hover {
+        box-shadow: 2px 2px 4px var(--color-text);
+        transform: scale(1.05);
+    }
+
+
+    /***
+
+        pages services
+        
+    ***/
+
+    /*** section cor ***/
+
+    .cor-body {
+        display: flex;
+        gap: 30px;
+    }
+
+    .list-prestation {
+        flex: 2;
+    }
+
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 1;
+        gap: 25px;
+        background-color: transparent;
+        margin-top: 0;
+        
+    }
+
+    .contact-info-button {
+        width: 300px;
+        margin: 20px auto 0 auto;
+        transition: transform 0.7s ease;
+        transition: box-shadow 0.3s ease;
+    }
+
+    .contact-info-button:hover {
+        box-shadow: 2px 2px 4px var(--color-text);
+        transform: scale(1.05);
+    }
 }
 
 /* Très grands écrans (≥ 1440px ou plus) */
 @media (min-width: 1440px) {
-  /* Ex: écrans ultra-wide, pliables en mode paysage */
+    main {
+        margin: 0 20% 30px 20%;
+    }
 }
