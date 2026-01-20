@@ -697,3 +697,21 @@ form {
         margin: 0 20% 30px 20%;
     }
 }
+
+
+/********* à suprimer après avoir fait le formulaire de contact *********/
+.send-mail {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-send-mail {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--color-primary);
+    color: white !important;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: transform 0.7s ease;
+    transition: box-shadow 0.3s ease;
+}
