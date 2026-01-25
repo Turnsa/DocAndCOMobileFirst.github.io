@@ -31,27 +31,9 @@
             <h1>Une question ? Un besoin ? Parlons-en !</h1>
             <p>Besoin d’aide pour vos documents, formulaires ou démarches ? Remplissez le formulaire ou contactez-moi directement. Je vous répondrai rapidement.</p>
         </div>
-        <section class="form-contact">
-            <form id="contact-form" action="/envoyer-message" method="POST" style="max-width: 500px; margin: auto;">
-                <label for="nom">Nom :</label>
-                <input type="text" id="nom" name="nom" required >
-                <label for="prenom">Prénom :</label>
-                <input type="text" id="prenom" name="prenom" required >
-                <label for="email">Adresse mail :</label>
-                <input type="email" id="email" name="email" required>
-                <label for="objet">Objet du message :</label>
-                <select id="objet" name="objet" required>
-                    <option value="">-- Sélectionnez un objet --</option>
-                    <option value="demande-devis">Demande de devis</option>
-                    <option value="rendez-vous">Prise de rendez-vous</option>
-                    <option value="Informations">Informations sur les prestations</option>
-                    <option value="proposition">Proposition de collaboration</option>
-                    <option value="autre">Autre/Précisez dans votre message</option>
-                </select>
-                <label for="message">Message :</label>
-                <textarea id="message" name="message" rows="10" placeholder="Écrivez votre message ici..." maxlength="500"></textarea>
-                <button type="submit" class="contact-info-button">Envoyer</button>
-            </form>
+        <section class="send-mail">
+            <h2>Envoyez nous un mail</h2>
+                <a href="mailto:bonjour@doc-and-co.fr?subject=Bonjour&body=Je%20vous%20contacte%20depuis%20votre%20site%20web" class="link-devis btn-send-mail">Nous contacter</a>
         </section>
     </main>
     <footer>
