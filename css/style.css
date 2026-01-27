@@ -1,4 +1,4 @@
-/* Valeurs de base pour démarrer un projet mobile-first */
+/* Valeurs de base pour démarrer un projet */
 
 :root {
     --font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
@@ -22,7 +22,6 @@ body {
     color: var(--color-text);
     background: var(--color-background);
     line-height: 1.5;
-    background-color: wheat;
 }
 
 img, picture, video, canvas, svg {
