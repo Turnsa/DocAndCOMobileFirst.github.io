@@ -330,7 +330,7 @@ footer {
     gap: 8px;
 }
 
-.footer-email, .footer-phone {
+.footer-email, .footer-phone, .footer-facebook, .footer-mentionsLegales, .footer-cgv, .footer-sap {
     display: flex;
     align-items: center;
     gap: 6px;
